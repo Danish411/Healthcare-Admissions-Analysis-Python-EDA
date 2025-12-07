@@ -1,5 +1,5 @@
-🏥 Healthcare Admissions and Length-of-Stay Analysis (Python/EDA) 🐍
-1. Overview
+# 🏥 Healthcare Admissions and Length-of-Stay Analysis (Python/EDA) 🐍
+## 1. Overview
 Conducted an in-depth Exploratory Data Analysis (EDA) using Python to understand patient admission patterns and analyze factors influencing Length of Stay (LOS) in a healthcare setting. The analysis provides operational insights for resource planning and efficiency improvements.
 
 Impactful Code Snippet (Feature Engineering)
@@ -18,45 +18,45 @@ df_practice['CALCULATED_LENGTH_OF_STAY'] = (
     df_practice['DISCHARGE DATE'] - df_practice['DATE OF ADMISSION']
 ).dt.days
 
-🎯 Goal
+# 🎯 Goal
 To identify key temporal trends (e.g., peak admission days/months) and statistically characterize the distribution of patient Length of Stay (LOS), informing hospital capacity planning and staffing needs.
 
-2. 📊 Exploratory Data Analysis (EDA) & Core Metric Profiling
+# 2. 📊 Exploratory Data Analysis (EDA) & Core Metric Profiling
 This section demonstrates the fundamental statistical characterization of the core metric, Length of Stay (LOS), and the calculation of key averages.
 
-A. Length of Stay Distribution
+### A. Length of Stay Distribution
 The initial step involved visualizing the distribution of the calculated CALCULATED_LENGTH_OF_STAY metric to understand its spread and identify potential skewness or outliers.
 
 Result: The histogram shows a relatively uniform distribution across the range of 1 to 30 days, which is critical input for subsequent modeling.
 
-(Use health_python1.png here: The histogram plot)
+![Distribution of Calculated Length of Stay](health_python1.png)
 
-B. Average LOS by Medical Condition
+### B. Average LOS by Medical Condition
 To understand if certain patient groups require longer hospitalization, the average LOS was calculated and visualized across different medical conditions.
 
 Process: The data was grouped by MEDICAL CONDITION and the mean of CALCULATED_LENGTH_OF_STAY was computed.
 
 Result: The average LOS across the studied conditions is highly consistent (around 15.5 days), suggesting that resource planning should be condition-agnostic based on this metric.
 
-(Use health_python2.png here: The Pandas output table showing averages)
+![Average LOS by Medical Condition Data](health_python2.png)
 
-(Use health_python3.png here: The resulting bar chart visualizing the averages)
+![Average LOS by Medical Condition Bar Chart](health_python3.png)
 
-3. 🗓️ Operational Temporal Analysis
+## 3. 🗓️ Operational Temporal Analysis
 This analysis focused on identifying operational bottlenecks and resource planning needs by analyzing patient admission trends by the day of the week.
 
-A. Admission Count by Day of Week
+### A. Admission Count by Day of Week
 The admission volume was calculated for each day of the week to detect statistically significant variations that impact daily staffing and resource allocation.
 
 Process: The dataset was grouped by ADMISSION_DAY_OF_WEEK and a count of admissions was generated.
 
 Result: The counts for all days of the week are highly balanced (ranging from ~7700 to ~7900), indicating a consistent patient flow that simplifies resource scheduling, as no single day experiences a major surge.
 
-(Use health_python4.png here: The Pandas output table showing counts by day)
+![Admission Counts by Day of Week Data](health_python4.png)
 
-(Use health_python5.png here: The resulting bar chart visualizing the admission counts)
+![Hospital Admissions by Day of Week Bar Chart](health_python5.png)
 
-4. Tools & Technologies (The Python Stack)
+## 4. Tools & Technologies (The Python Stack)
 Primary Language: Python 3
 
 Data Manipulation: Pandas (for cleaning and feature engineering)
@@ -67,7 +67,7 @@ Data Visualization: Matplotlib and Seaborn (for statistical plots)
 
 Environment: Jupyter Notebook / Google Colab (.ipynb)
 
-5. Key Actions / Process (EDA & Statistical Analysis)
+## 5. Key Actions / Process (EDA & Statistical Analysis)
 Data Cleaning & Manipulation: Used Pandas to handle missing data, convert dates, and calculate the CALCULATED_LENGTH_OF_STAY feature.
 
 Temporal Analysis: Analyzed admission data across multiple dimensions:
@@ -80,7 +80,7 @@ Statistical Profiling: Performed descriptive statistics on CALCULATED_LENGTH_OF_
 
 Hypothesis Generation: Explored correlations between categorical variables (e.g., admission type) and the LOS to generate hypotheses for future predictive modeling.
 
-6. Key Achievements & Results
+## 6. Key Achievements & Results
 Operational Efficiency: Provided clear, visualized evidence of consistent admission patterns across the week, enabling streamlined staff scheduling based on steady demand.
 
 Statistical Rigor: Demonstrated proficiency in using the fundamental Python data science stack (Pandas, NumPy, Matplotlib) to derive statistical insights from real-world healthcare data.
