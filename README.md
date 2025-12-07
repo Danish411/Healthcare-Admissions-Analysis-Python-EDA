@@ -9,19 +9,19 @@ Python
 
 ## Python Snippet: Creating Time-Based Features
 
-# Convert date columns to datetime objects
+### Convert date columns to datetime objects
 df_practice['DATE OF ADMISSION'] = pd.to_datetime(df_practice['DATE OF ADMISSION'])
 df_practice['DISCHARGE DATE'] = pd.to_datetime(df_practice['DISCHARGE DATE'])
 
-# Calculate the critical Length of Stay metric
+### Calculate the critical Length of Stay metric
 df_practice['CALCULATED_LENGTH_OF_STAY'] = (
     df_practice['DISCHARGE DATE'] - df_practice['DATE OF ADMISSION']
 ).dt.days
 
-# 🎯 Goal
+## 🎯 Goal
 To identify key temporal trends (e.g., peak admission days/months) and statistically characterize the distribution of patient Length of Stay (LOS), informing hospital capacity planning and staffing needs.
 
-# 2. 📊 Exploratory Data Analysis (EDA) & Core Metric Profiling
+## 2. 📊 Exploratory Data Analysis (EDA) & Core Metric Profiling
 This section demonstrates the fundamental statistical characterization of the core metric, Length of Stay (LOS), and the calculation of key averages.
 
 ### A. Length of Stay Distribution
